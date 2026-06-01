@@ -1,73 +1,88 @@
-🥚 EggVision  
-EggVision is an iOS-based capstone project that classifies egg types (chicken or quail) and predicts the gender of unhatched chicks for chicken eggs using LiDAR-based shape analysis. It offers a humane and efficient solution to reduce the mass culling of male chicks in the poultry industry by analyzing egg morphology.
+| Result | Prediction |
+|--------|-----------|
+| SI > 0.50 | 🔴 Likely **Female** |
+| SI ≤ 0.50 | 🔵 Likely **Male** |
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+> Measurements can be taken **automatically** using LiDAR or entered
+> **manually** by the user.
 
-Features  
-- Detect and classify egg type (chicken or quail) using CoreML  
-- Predict chick gender for chicken eggs using Shape Index  
-- Automatically measure egg dimensions using LiDAR and SceneKit  
-- Manual input option for Shape Index-based predictions  
-- Clean SwiftUI interface  
+---
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+## 🛠️ Tech Stack
 
-Gender Prediction Logic  
-This app uses a rule-based gender prediction system based on the threshold values from Kayadan & Uzun (2023). No separate machine learning model is used for gender classification.
+| Technology | Purpose |
+|-----------|---------|
+| Swift / SwiftUI | UI and app logic |
+| CoreML | Egg type classification |
+| ARKit | LiDAR scanning and spatial tracking |
+| SceneKit | 3D dimension measurement |
+| Rule-based system | Chick gender prediction |
 
-Formula:  
-Shape Index (SI) = Short Axis / Long Axis
+---
 
-If SI > 0.50 → Likely Female  
-If SI ≤ 0.50 → Likely Male
+## 🚀 Getting Started
 
-Measurements can be taken automatically using LiDAR or entered manually by the user.
+### Requirements
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+- macOS with **Xcode 15** or later
+- **iPhone Pro** model with LiDAR sensor
+  - iPhone 13 Pro, 14 Pro, or 15 Pro
 
-Getting Started  
+### Installation
 
-Requirements:  
-- macOS with Xcode 15 or later  
-- iPhone Pro model with LiDAR (e.g., iPhone 13 Pro, 14 Pro, 15 Pro)  
+1. **Clone the repository**
+```bash
+   git clone https://github.com/H-Shahriar/EggVision.git
+```
 
-Instructions:  
-1. Clone the repository  
-   git clone https://github.com/H-Shahriar/EggVision.git  
+2. **Open in Xcode**
+```bash
+   cd EggVision
+   open EggVision.xcodeproj
+```
 
-2. Open the project in Xcode  
+3. **Connect your device**
+   - Plug in your LiDAR-enabled iPhone
+   - Select your device as the build target
+   - Click **Run** ▶️
 
-3. Connect your LiDAR-enabled iPhone and run the app 
+---
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+## 📸 Screenshots
 
-Tech Stack  
-- Swift / SwiftUI  
-- CoreML for egg type classification  
-- ARKit + SceneKit for LiDAR scanning  
-- Custom rule-based gender prediction system  
+<p align="center">
+  <img src="eggvision/Assets.xcassets/AppIcon.appiconset/appstore.png" width="150"/>
+</p>
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+> 📁 App screenshots coming soon — will be added to a `/screenshots` folder.
 
-Credits  
-Developed by Hasan Shahriar  
-Sponsored by Harmony Harvesty Farm  
-Capstone Project – University of Canberra, 2025  
-Based on the research: Kayadan & Uzun (2023)  
+---
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+## 👤 Credits
 
-License  
+| Role | Details |
+|------|---------|
+| Developer | Hasan Shahriar |
+| Sponsor | Harmony Harvesty Farm |
+| Institution | University of Canberra, 2025 |
+| Research Basis | Kayadan & Uzun (2023) |
 
-MIT License  
+---
 
-Copyright (c) 2024-2025 Open Source Institute
+## 📄 License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+MIT License — Copyright (c) 2024–2025
 
-1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software to deal in the Software without restriction,
+including the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, subject to the following
+conditions:
 
-2. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.  
+- The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+- Neither the name of the copyright holder nor contributors may be used
+  to endorse products derived from this software without prior written
+  permission.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
