@@ -37,25 +37,7 @@ Instructions:
 
 2. Open the project in Xcode  
 
-3. Connect your LiDAR-enabled iPhone and run the app  
-
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-Screenshots  
-
-Home Screen  
-- screenshots/home.png
-
-Egg Classification Result  
-- screenshots/type-classification.png
-
-LiDAR Scan in Progress  
-- screenshots/lidar-scan.png
-
-Gender Prediction Output  
-- screenshots/gender-result.png
-
-(If you want to add screenshots, please name and organize them inside a /screenshots folder in the repo.)
+3. Connect your LiDAR-enabled iPhone and run the app 
 
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
