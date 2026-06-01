@@ -1,3 +1,64 @@
+# 🥚 EggVision
+
+<p align="center">
+  <img src="eggvision/Assets.xcassets/AppIcon.appiconset/appstore.png" width="150"/>
+</p>
+
+<p align="center">
+  An iOS capstone project that classifies egg types and predicts the gender 
+  of unhatched chicks using LiDAR-based shape analysis — offering a humane 
+  solution to reduce mass culling of male chicks in the poultry industry.
+</p>
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Gender Prediction Logic](#gender-prediction-logic)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Screenshots](#screenshots)
+- [Credits](#credits)
+- [License](#license)
+
+---
+
+## 🔍 Overview
+
+EggVision is an iOS-based capstone project developed for **Harmony Harvesty Farm**
+that uses machine learning and spatial computing to:
+
+- Classify eggs as **chicken** or **quail** using CoreML
+- Predict the **gender of unhatched chicks** for chicken eggs using
+  LiDAR-based shape analysis
+
+By analyzing egg morphology non-invasively, EggVision provides a practical
+and humane alternative to the mass culling of male chicks — a common but
+controversial practice in the poultry industry.
+
+---
+
+## ✨ Features
+
+- 🐣 **Egg Classification** – Detect and classify egg type (chicken or quail) using CoreML
+- ⚧️ **Gender Prediction** – Predict chick gender using Shape Index formula
+- 📡 **LiDAR Scanning** – Automatically measure egg dimensions using ARKit + SceneKit
+- ✍️ **Manual Input** – Enter Shape Index values manually as an alternative
+- 🎨 **Clean UI** – Intuitive SwiftUI interface designed for ease of use
+
+---
+
+## 🧮 Gender Prediction Logic
+
+EggVision uses a **rule-based gender prediction system** based on threshold
+values from Kayadan & Uzun (2023). No separate machine learning model is
+used for gender classification.
+
+### Formula
+Shape Index (SI) = Short Axis / Long Axis
+
 | Result | Prediction |
 |--------|-----------|
 | SI > 0.50 | 🔴 Likely **Female** |
